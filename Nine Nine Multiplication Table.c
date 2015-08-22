@@ -1,7 +1,7 @@
 #include "stdio.h"
 #include <stdlib.h>
 /*
-import 9*9 table
+export 9*9 table
 */
 void main()
 {
@@ -9,7 +9,7 @@ void main()
 	for(i=1;i<=9;i++)
 	{
 		for(k=0;k<i-1;k++)
-				printf("\t");
+				printf("\t");//allign the upper and lower
 		for(j=i;j<=9;j++)
 		{
 			result = i*j;

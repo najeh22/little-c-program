@@ -36,15 +36,27 @@ int *fun(int m,int k)//output k prime numbers that is larger than m
 }
 void writeDat()//in this function, the data will be sent to out.dat
 {
+	int i,m,k,*p;
+	FILE *wf;
+	wf=fopen("out.dat","w");
+	for(i=0;i<10;i++)
+	{
+		printf("m=\n");
+		scanf("%d",&m);
+		printf("k=\n");
+		scanf("%d",&k);
+		p=fun(m,k);
+		for(i=0;i<k;i++)
+		{
+			printf("%d\t",*(p+i));
+			fprintf(wf,"%d",*(p+i));
+		}
+		printf("\n");
+	}
+	fclose(wf);
 }
 void main()
 {
-	int m,k,i,*p;
-	printf("m=\n");
-	scanf("%d",&m);
-	printf("k=\n");
-	scanf("%d",&k);
-	p=fun(m,k);
-	for(i=0;i<k;i++)
-		printf("%d\t",*(p+i));
+	writeDat();
+
 }

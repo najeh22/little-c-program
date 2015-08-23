@@ -5,6 +5,7 @@
     请勿改动主函数main()和写函数writeDat()的内容。
 */
 #include "stdio.h"
+#include "stdlib.h"
 
 int isprime(int m)//judge whether m is a prime number
 {
@@ -45,18 +46,21 @@ void writeDat()//in this function, the data will be sent to out.dat
 		scanf("%d",&m);
 		printf("k=\n");
 		scanf("%d",&k);
+		fprintf(wf,"m=%d\tk=%d\n",m,k);
 		p=fun(m,k);
 		for(n=0;n<k;n++)
 		{
 			printf("%d\t",*(p+n));
-			fprintf(wf,"%d",*(p+n));
+			fprintf(wf,"%d\t",*(p+n));
 		}
 		printf("\n");
+		fprintf(wf,"\n\n");
 	}
 	fclose(wf);
 }
+
 void main()
 {
 	writeDat();
-
+	system("pause");
 }

@@ -3,6 +3,11 @@
     部分源程序存在文件prog1.c中。
     例如：若输入17 5 则应输出：19，23，29，31，37。
     请勿改动主函数main()和写函数writeDat()的内容。
+	please write a function jsValue(int m,int k,int xx[])).the function is: send the k prime numbers that is larger than m to an array.
+	finally use writeDat() to read ten sets of data, and send them to out.dat
+	some source program is stored in prog1.c
+	for example, if you input 17 5, then the function will output 19,23,29,31,37
+	please do not change the content of main() and writeDat();
 */
 #include "stdio.h"
 #include "stdlib.h"

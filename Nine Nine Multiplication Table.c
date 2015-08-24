@@ -13,7 +13,7 @@ void main()
 		for(j=i;j<=9;j++)
 		{
 			result = i*j;
-			printf("%d*%d=%3d ",i,j,result);
+			printf("%d*%d=%3d ",i,j,result);//I find when %3d,the upper and lower can be alligned
 		}
 		printf("\n");
 	}
